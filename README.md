@@ -1,0 +1,11 @@
+Proyecto final de la asignatura de realidad virtual 
+
+El objetivo de este trabajo es desarrollar un juego inspirado en el popular videojuego Rocket League, 
+un modo de juego de un único jugador en el que el objetivo es marcar gol con un único coche a modo de entreamiento del juego original.
+El movimiento del balón corresponde al de un objeto que sufre la aceleración de la gravedad (9,8 m/s2). Esto genera una trayectoria parabólica. 
+Las paredes del terreno de juego deben ser límites en la posición del coche y del balón. El balón debe rebotar en las paredes en caso de choque. 
+Con respecto al bote, al contactar con el suelo se debe rebotar con una velocidad algo menor que la de contacto (por ejemplo, un 80%).  
+En las ecuaciones anteriores, P(t) y v(t) se refiere a la posición y la velocidad del objeto en el instante t, P(t+1) y v(t+1) se refiere a la posición y la velocidad del objeto en el instante posterior, a es la aceleración y lapso es el tiempo transcurrido entre los dos instantes. En nuestro caso la aceleración sería la gravedad y el lapso de tiempo es de 1/60 segundos.
+Los mandos del juego deben permitir aumentar y disminuir la velocidad del coche (flechas arriba y abajo del teclado) y girarlo a la derecha o a la izquierda (flechas derecha e izquierda del teclado). En caso de choque con las paredes hay que modificar la dirección del coche para no traspasar los límites del campo. Hay que detectar los impactos del coche con el balón. En caso de impacto se aumentará la velocidad del balón en la dirección del contacto entre el coche y el balón. (La cantidad de movimiento transmitida al balón se adaptará para que el juego resulte realista).
+Para visualizar el juego no es necesario utilizar un objeto CGCamera. En su lugar se puede calcular la posición y orientación del observador en una vista trasera del vehículo (es decir, se puede calcular la matriz view considerando la posición y orientación del coche). Para mejorar la imagen del juego es adecuado incluir un giro de la cámara cuando se produzca un giro del coche. En caso de que colocar el observador de la forma anterior resulte demasiado complicado se podrá incluir una cámara que se maneje de forma independiente al movimiento del coche.
+El juego finalizará al conseguir un gol, es decir, cuando el balón se encuentre en el interior de la portería.
